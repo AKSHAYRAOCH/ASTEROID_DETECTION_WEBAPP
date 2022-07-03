@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASTEROID HAZARD PREDICTION</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- <div class="box"> -->
+    <h1>ASTEROID DETECTION..</h1>
+    <!-- </div> -->
+
+    <!-- <div class="box"> -->
+    <center>
+    <form action="/predict" method="post">
+        <table>
+            <tr>
+
+                <td>
+                    <label for="Absolute Magnitude">Absolute Magnitude</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="Absolute Magnitude" name="Absolute Magnitude" placeholder="Enter estimated Absolute Magnitude" min=0 />
+                </td>
+        </tr>
+        <tr>
+                <td>
+                    <label for="Est Dia in KM(min)">Est Dia in KM(min) </label>
+                </td>
+                <td>:</td>
+                <td>
+                    <input type="text" id="Est Dia in KM(min)" name="Est Dia in KM(min)" placeholder="Enter estimated Est Dia in KM(min) " min="0" />
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Relative Velocity km per sec">Relative Velocity km per sec </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Relative Velocity km per sec" name="Relative Velocity km per sec" placeholder="Enter estimated Relative Velocity km per sec " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Miss Dist.(kilometers)">Miss Dist.(kilometers) </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Miss Dist.(kilometers)" name="Miss Dist.(kilometers)" placeholder="Enter estimated Miss Dist.(kilometers) " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Orbit ID">Orbit ID </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Orbit ID" name="Orbit ID" placeholder="Enter estimated Orbit ID " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Orbit Uncertainity">Orbit Uncertainity </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Orbit Uncertainity" name="Orbit Uncertainity" placeholder="Enter estimated Orbit Uncertainity " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Minimum Orbit Intersection">Minimum Orbit Intersection </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Minimum Orbit Intersection" name="Minimum Orbit Intersection" placeholder="Enter estimated Minimum Orbit Intersection " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Jupiter Tisserand Invariant">Jupiter Tisserand Invariant </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Jupiter Tisserand Invariant" name="Jupiter Tisserand Invariant" placeholder="Enter estimated Jupiter Tisserand Invariant " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Epoch Osculation">Epoch Osculation </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Epoch Osculation" name="Epoch Osculation" placeholder="Enter estimated Epoch Osculation " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Eccentricity">Eccentricity </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Eccentricity" name="Eccentricity" placeholder="Enter estimated Eccentricity " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Inclination">Inclination </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Inclination" name="Inclination" placeholder="Enter estimated Inclination " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Asc Node Longitude">Asc Node Longitude </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Asc Node Longitude" name="Asc Node Longitude" placeholder="Enter Estimated Asc Node Longitude " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Orbital Period">Orbital Period </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Orbital Period" name="Orbital Period" placeholder="Enter Estimated Orbital Period " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Perihelion Distance">Estimated Perihelion Distance </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Perihelion Distance" name="Perihelion Distance" placeholder="Enter Estimated Perihelion Distance " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Perihelion Arg">Estimated Perihelion Arg </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Perihelion Arg" name="Perihelion Arg" placeholder="Enter Perihelion Arg " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Aphelion Dist">Estimated Aphelion Dist </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Aphelion Dist" name="Aphelion Dist" placeholder="Enter Aphelion Dist " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Perihelion Time">Estimated Perihelion Time </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Perihelion Time" name="Perihelion Time" placeholder="Enter Perihelion Time " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Mean Anomaly">Estimated Mean Anomaly </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Mean Anomaly" name="Mean Anomaly" placeholder="Enter Mean Anomaly " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="Mean Motion">Estimated Mean Motion </label>
+            </td>
+            <td>:</td>
+            <td>
+                <input type="text" id="Mean Motion" name="Mean Motion" placeholder="Enter Estimated Mean Motion " min="0" />
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <input id="btn" type="submit" value="Predict" >
+            </td>
+        </tr>
+        </table>
+        <p>Prediction : {{pred}}</p>
+    </form>
+    </center>
+<!-- </div> -->
+</body>
+</html>
