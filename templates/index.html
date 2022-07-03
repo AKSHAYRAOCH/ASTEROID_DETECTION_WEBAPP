@@ -3,10 +3,20 @@
 <head>
     <title>ASTEROID HAZARD PREDICTION</title>
     <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+</style>
 </head>
 <body>
     <!-- <div class="box"> -->
-    <h1>ASTEROID DETECTION..</h1>
+    <h1 style="background-color:powderblue;">ASTEROID  PREDICTION</h1>
     <!-- </div> -->
 
     <!-- <div class="box"> -->
@@ -208,7 +218,7 @@
             </td>
         </tr>
         </table>
-        <p>Prediction : {{pred}}</p>
+        <p id="prediction">Prediction : {{pred}}</p>
     </form>
     </center>
 <!-- </div> -->
