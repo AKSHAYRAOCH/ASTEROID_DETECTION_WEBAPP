@@ -1,4 +1,5 @@
 body{
+    opacity : 0.75;
     text-align: center;
     font-family: Verdana, Tahoma, sans-serif;
     font-size: larger;
@@ -7,10 +8,21 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
- h1,p{
-   padding: 5px;
-   border-radius: 5px;
-    background-color: #f2f2f2;
+ h1,p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 form{
     padding: 10px;
@@ -42,4 +54,10 @@ table{
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+}
+
+
+
+#prediction {
+color: white ;
 }
